@@ -6,8 +6,8 @@
 
 #### PooledClass 25
 
-##### _prodInvariant 142
-##### invariant 164
+##### _prodInvariant 142 √
+##### invariant 164 √
 
 #### ReactElement 63
 
