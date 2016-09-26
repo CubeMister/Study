@@ -4,7 +4,7 @@
 
 ### ReactChildren 29
 
-#### PooledClass 25
+#### PooledClass 25 √
 
 ##### _prodInvariant 142 √
 ##### invariant 164 √
@@ -13,10 +13,11 @@
 
 ##### _assign 175
 ##### ReactCurrentOwner 37
-##### warning 174
+##### warning 174 √
+###### emptyFunction 156 √
 ##### canDefineProperty 120
 
-#### emptyFunction 156
+#### emptyFunction 156 √
 
 #### traverseAllChildren 147
 
