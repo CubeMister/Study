@@ -14,18 +14,25 @@ var traverseAllChildren = _dereq_(147);
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
 
-var userProvidedKeyEscapeRegex = /\/+/g;
+var userProvidedKeyEscapeRegex = /\/+/g; // /一个或多个
+/** 转义用户提供的key */
 function escapeUserProvidedKey(text) {
+  /** 通过指定的正则进行匹配 ，将一个或多个斜杠使用$&/替换 */
   return ('' + text).replace(userProvidedKeyEscapeRegex, '$&/');
 }
 
 /**
+ * bookkeeping：https://en.wikipedia.org/wiki/Boilerplate_code
+ * bookkeeping原指每天记录一些金融交易的影响。
+ * 记账，记账相关的术语，指那些不属于业务逻辑的代码，
+ * 但是又与业务逻辑有交叉，它是为了保持数据结构的更新和处理程序的次要方面
+ * PooledClass 表示bookkeeping被关联到执行一个子节点遍历
  * PooledClass representing the bookkeeping associated with performing a child
- * traversal. Allows avoiding binding callbacks.
+ * traversal. Allows avoiding binding callbacks.允许避免绑定回调函数
  *
- * @constructor ForEachBookKeeping
- * @param {!function} forEachFunction Function to perform traversal with.
- * @param {?*} forEachContext Context to perform context with.
+ * @constructor ForEachBookKeeping 对BookKeeping进行循环遍历操作
+ * @param {!function} forEachFunction Function to perform traversal with. 函数执行遍历
+ * @param {?*} forEachContext Context to perform context with. 该函数forEach context上下文
  */
 function ForEachBookKeeping(forEachFunction, forEachContext) {
   this.func = forEachFunction;
@@ -39,6 +46,7 @@ ForEachBookKeeping.prototype.destructor = function () {
 };
 PooledClass.addPoolingTo(ForEachBookKeeping, twoArgumentPooler);
 
+/** 遍历单个子节点 */
 function forEachSingleChild(bookKeeping, child, name) {
   var func = bookKeeping.func;
   var context = bookKeeping.context;
@@ -48,13 +56,14 @@ function forEachSingleChild(bookKeeping, child, name) {
 
 /**
  * Iterates through children that are typically specified as `props.children`.
- *
+ * API方法 , children.foreach
  * See https://facebook.github.io/react/docs/top-level-api.html#react.children.foreach
  *
  * The provided forEachFunc(child, index) will be called for each
  * leaf child.
+ * forEachFunc函数会被每一个叶子节点调用
  *
- * @param {?*} children Children tree container.
+ * @param {?*} children Children tree container. 所有子节点容器
  * @param {function(*, int)} forEachFunc
  * @param {*} forEachContext Context for forEachContext.
  */
@@ -62,6 +71,21 @@ function forEachChildren(children, forEachFunc, forEachContext) {
   if (children == null) {
     return children;
   }
+
+  /**
+   *
+   * this.func = forEachFunc;
+   * this.context = forEachContext;
+   * this.count = 0;
+   */
+
+  function forEachSingleChild(bookKeeping, child, name) {
+    var func = bookKeeping.func;
+    var context = bookKeeping.context;
+    // 将全局上下文交给外部传入的函数调用，然后在传入child，索引值
+    func.call(context, child, bookKeeping.count++);
+  }
+
   var traverseContext = ForEachBookKeeping.getPooled(forEachFunc, forEachContext);
   traverseAllChildren(children, forEachSingleChild, traverseContext);
   ForEachBookKeeping.release(traverseContext);
@@ -165,7 +189,8 @@ function countChildren(children, context) {
 /**
  * Flatten a children object (typically specified as `props.children`) and
  * return an array with appropriately re-keyed children.
- *
+ * 返回一个数组，被适当的重新定义key的children
+ * react.children.array
  * See https://facebook.github.io/react/docs/top-level-api.html#react.children.toarray
  */
 function toArray(children) {

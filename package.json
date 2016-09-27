@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "material-ui": "^0.15.4"
+  },
   "devDependencies": {
     "jest-cli": "^15.1.1"
   },

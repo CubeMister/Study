@@ -52,6 +52,7 @@
       }
       // Implicit key determined by the index in the set
       /** js的toString方法，支持的进制是2-36之间，(35).toString(36) === 'z'*/
+      /** 这就是虽然你不传入key，但是react仍然能够执行的原因，它会根据当前组件的索引值，进行36进制的转换 */
       return index.toString(36);
     }
 
@@ -141,7 +142,7 @@
                         mapsAsChildrenAddendum) : void 0;
               didWarnAboutMaps = true;
             }
-            /** 迭代器将会提供整个元组而不是值 */
+            /** 迭代器将会提供整个元组 */
             // Iterator will provide entry [k,v] tuples rather than values.
             /**  */
             while (!(step = iterator.next()).done) {
@@ -191,6 +192,7 @@
      * @param {?*} traverseContext Context for traversal.
      * @return {!number} The number of children in this subtree.
      */
+    /** 子节点，回调函数，遍历上下文 */
     function traverseAllChildren(children, callback, traverseContext) {
       if (children == null) {
         return 0;

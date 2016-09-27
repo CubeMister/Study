@@ -2,78 +2,60 @@
 
 ## React 26
 
-### ReactChildren 29
-
+### ReactChildren 29 √
 #### PooledClass 25 √
-
 ##### _prodInvariant 142 √
 ##### invariant 164 √
-
-#### ReactElement 63
-
-##### _assign 175
+#### ReactElement 63 √
+##### _assign 175 √
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ###### emptyFunction 156 √
 ##### canDefineProperty 120 √
-
 #### emptyFunction 156 √
-
-#### traverseAllChildren 147
-
+#### traverseAllChildren 147 √
 ##### _prodInvariant 142 √
 ##### ReactCurrentOwner 37 √
-##### ReactElement 63
+##### ReactElement 63 √
 ##### getIteratorFn 133 √
 ##### invariant 164 √
 ##### KeyEscapeUtils 23 √
 ##### warning 174 √
 
-### ReactComponent 32
-
+### ReactComponent 32 √
 #### _prodInvariant 142 √
-#### ReactNoopUpdateQueue 82
-
+#### ReactNoopUpdateQueue 82 √
 ##### warning 174 √
-
 #### canDefineProperty 120 √
 #### emptyObject 157 √
 #### invariant 164 √
 #### warning 174 √
 
-### ReactPureComponent 88
-
-#### _assign 175
-#### ReactComponent 32
-
+### ReactPureComponent 88 √
+#### _assign 175 √
+#### ReactComponent 32 √
 ##### _prodInvariant 142 √
-##### ReactNoopUpdateQueue 82
+##### ReactNoopUpdateQueue 82 √
 ##### canDefineProperty 120 √
-##### emptyObject 157
+##### emptyObject 157 √
 ##### invariant 164 √
 ##### warning 174 √
-
 #### emptyObject 157 √
-#### ReactNoopUpdateQueue 82
-
+#### ReactNoopUpdateQueue 82 √
 ##### warning 174 √
 
 ### ReactClass 31
-
 #### _prodInvariant 142 √
 #### _assign 175 √
-#### ReactComponent 32
-
+#### ReactComponent 32 √
 ##### _prodInvariant 142 √
-##### ReactNoopUpdateQueue 82
+##### ReactNoopUpdateQueue 82 √
 ##### canDefineProperty 120 √
-##### emptyObject 157
+##### emptyObject 157 √
 ##### invariant 164 √
 ##### warning 174 √
-
-#### ReactElement 63
-
-##### _assign 175
+#### ReactElement 63 √
+##### _assign 175 √
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
@@ -83,11 +65,11 @@
 ##### keyMirror 167
 
 #### ReactPropTypeLocationNames 84
-#### ReactNoopUpdateQueue 82
+#### ReactNoopUpdateQueue 82 √
 
 ##### warning 174 √
 
-#### emptyObject 157
+#### emptyObject 157 √
 #### invariant 164 √
 #### keyMirror 167
 
@@ -96,13 +78,12 @@
 #### keyOf 168
 #### warning 174 √
 
-
 ### ReactDOMFactories 46
 
 #### ReactElement 63
 
 ##### _assign 175
-##### ReactCurrentOwner 37
+##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
 
@@ -119,9 +100,9 @@
 ##### warning 174 √
 
 
-### ReactElement 63
+### ReactElement 63 √
 
-#### _assign 175
+#### _assign 175 √
 #### ReactCurrentOwner 37 √
 #### warning 174 √
 #### canDefineProperty 120 √
@@ -809,7 +790,7 @@
 ##### _prodInvariant 142 √
 ##### _assign 175 √
 ##### CallbackQueue 5
-##### PooledClass 25
+##### PooledClass 25 √
 ##### ReactFeatureFlags 69
 ##### ReactReconciler 90
 ##### Transaction 116
