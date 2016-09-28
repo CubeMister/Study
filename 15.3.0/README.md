@@ -59,30 +59,23 @@
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
-
-#### ReactPropTypeLocations 85
-
-##### keyMirror 167
-
-#### ReactPropTypeLocationNames 84
+#### ReactPropTypeLocations 85 √
+##### keyMirror 167 √
+#### ReactPropTypeLocationNames 84 √
 #### ReactNoopUpdateQueue 82 √
-
 ##### warning 174 √
-
 #### emptyObject 157 √
 #### invariant 164 √
-#### keyMirror 167
-
+#### keyMirror 167 √
 ##### invariant 164 √
-
-#### keyOf 168
+#### keyOf 168 √
 #### warning 174 √
 
 ### ReactDOMFactories 46
 
-#### ReactElement 63
+#### ReactElement 63 √
 
-##### _assign 175
+##### _assign 175 √
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
@@ -99,7 +92,6 @@
 ##### getIteratorFn 133 √
 ##### warning 174 √
 
-
 ### ReactElement 63 √
 
 #### _assign 175 √
@@ -107,35 +99,29 @@
 #### warning 174 √
 #### canDefineProperty 120 √
 
-
 ### ReactPropTypes 86
 
 #### ReactElement 63 √
-
 ##### _assign 175 √
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
 
-#### ReactPropTypeLocationNames 84
+#### ReactPropTypeLocationNames 84 √
 #### ReactPropTypesSecret 87
 #### warning 174 √
 #### emptyFunction 156 √
 #### getIteratorFn 133 √
 
-
 ### onlyChild 140
 
 #### _prodInvariant 142 √
 #### ReactElement 63 √
-
 ##### _assign 175 √
 ##### ReactCurrentOwner 37 √
 ##### warning 174 √
 ##### canDefineProperty 120 √
-
 #### invariant 164 √
-
 
 ## ReactDOM 38
 
